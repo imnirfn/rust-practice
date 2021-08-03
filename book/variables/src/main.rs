@@ -40,4 +40,29 @@ fn main() {
 
     // accessing content of the array using indexing
     println!("Month, {}", months[1]);
+
+    another_function(30);
+    some_function();
+
+    let x = five(1);
+    println!("X is: {}", x);
+}
+
+fn another_function(x: i32) {
+    println!("The value of x is: {}", x)
+}
+
+fn some_function(){
+    let x = 5; // this is a statement
+    let y = { // this is an expression
+        let x = 3;
+        x + 1 // expressions do not include ending semicolons.
+    };
+
+    println!("Y is: {}", y);
+}
+
+fn five(x: i32) -> i32 {
+    // will return this anyway
+    x + 5
 }
