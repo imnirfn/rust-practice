@@ -1,3 +1,4 @@
+
 fn main() {
     let number = 6;
 
@@ -42,4 +43,15 @@ fn countdown_timer() {
         println!("{}!", cd);
     }
     println!("LIFTOFFF!!");
+}
+
+fn divisible_by(number: u32) {
+    // using a match statement
+    // will look later
+    // match number {
+    //     number % 4 == 0 => println!("number is divisible by 4"),
+    //     number % 3 == 0 => println!("number is divisible by 3"),
+    //     // else
+    //     _ => println!("number is not divisible by 3 and 4")
+    // }
 }
