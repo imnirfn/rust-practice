@@ -1,12 +1,21 @@
 // program that calculates the area of a rectangle
 
-fn main() {
-    let width1 = 30;
-    let height1 = 50;
-
-    println!("Area of the rectangle is : {}", area(width1, height1));
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
 }
 
-fn area(width: u32, height: u32) -> u32 {
-    width * height
+fn main() {
+    let rect = Rectangle {
+        width: 30,
+        height: 50
+    };
+
+    println!("Area of the rectangle is : {}", area(&rect));
+    println!("{:#?}", rect);
+}
+
+fn area(rectangle: &Rectangle) -> u32 {
+    rectangle.width * rectangle.height
 }
