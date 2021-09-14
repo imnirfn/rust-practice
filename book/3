@@ -1,0 +1,18 @@
+fn main() {
+    println!("Hello, world!");
+    struct User {
+        username: String,
+        email: String,
+        sign_in_count: u64,
+        active: bool
+    }
+
+    let mut user1 = User {
+        username: String::from("imnirfn"),
+        email: String::from("s3ns3xy@yahoo.com"),
+        sign_in_count: 1,
+        active: true,
+    };
+
+    println!("User's email is: {}", user1.email);
+}
