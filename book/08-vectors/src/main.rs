@@ -32,5 +32,24 @@ fn main() {
         *i += 50;
         println!("mut {}", i);
     }
+    vector_of_enums();
+}
 
+#[derive(Debug)]
+enum SpreadsheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
+}
+
+fn vector_of_enums() {
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Float(10.22),
+        SpreadsheetCell::Text(String::from("Green")),
+    ];
+
+    for i in &row {
+        println!("{:#?}", i);
+    }
 }
