@@ -12,7 +12,7 @@ fn main() {
 
     println!("{:#?}", score);
 
-    // iterating over each key/value
+    // iterating over each key / value
     for (key, value) in &scores {
         println!("{}: {}", key, value);
     }
