@@ -35,3 +35,5 @@ fn ownership_and_hashmaps() {
     let mut map = HashMap::new();
     map.insert(field_name, field_value);
 }
+
+
