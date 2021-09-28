@@ -2,7 +2,6 @@ use std::collections::HashMap;
 
 fn main() {
     // hashmap is good when not using an index use case
-    //
     let mut scores = HashMap::new();
 
     scores.insert(String::from("Blue"), 10);
