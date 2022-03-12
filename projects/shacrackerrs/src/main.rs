@@ -1,6 +1,3 @@
-//  TODO
-// 1. verify user input its sha1
-//
 
 use std::env;
 use std::process;

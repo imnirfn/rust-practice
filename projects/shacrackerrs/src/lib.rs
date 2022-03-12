@@ -4,7 +4,7 @@
 //
 //
 
-
+use sha1::Digest;
 use std::fs;
 use std::io::{
     BufRead,
@@ -47,7 +47,11 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 
     for line in reader.lines() {
         let line = line?.trim().to_string();
-        println!("{}", line);
+        println!("hex: {}", hex::encode(sha1::Sha1::digest(line.as_bytes())));
+        if config.hash == hex::encode(sha1::Sha1::digest(line.as_bytes())) {
+            println!("hash matched: {}:{}", config.hash, line);
+            return Ok(());
+        } 
     }
 
     Ok(())
