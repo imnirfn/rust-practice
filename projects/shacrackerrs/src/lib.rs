@@ -4,6 +4,9 @@
 //
 //
 
+extern crate colored;
+
+use colored::*;
 use sha1::Digest;
 use std::fs;
 use std::io::{
