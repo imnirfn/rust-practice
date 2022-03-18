@@ -8,6 +8,14 @@ pub fn create_empty() -> Vec<u8> {
 ///
 /// Applications often use buffers when serializing data to send over the network.
 pub fn create_buffer(count: usize) -> Vec<u8> {
+    // unimplemented!("create a zeroized buffer of {} bytes", count)
+    let mut buffer = create_empty();
+    
+    for _ in 0..count {
+        buffer.push(0);
+    }
+
+    buffer
     (0..count).map(|_| 0).collect()
 }
 
