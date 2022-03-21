@@ -8,6 +8,9 @@ pub fn divmod(dividend: i16, divisor: i16) -> (i16, i16) {
 
 pub fn evens<T>(iter: impl Iterator<Item = T>) -> impl Iterator<Item = T> {
     iter.enumerate()
+        .filter(|i, val| i%2 ==0)
+        .map()
+    iter.enumerate()
         .filter(|(i, val)| i%2 == 0)
         .map(|(i, val)| val)
 }
